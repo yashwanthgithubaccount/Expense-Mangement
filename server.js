@@ -19,9 +19,9 @@ app.use(cors());
 app.use('/api/v1/users',require('./routes/userRoute'))
 app.use('/api/v1/transections',require('./routes/transectionRoute'))
 //static files
-app.use(express.static(path.join(__dirname,"./cilent/build")));
+app.use(express.static(path.join(__dirname,"./client/build")));
 app.get("*",function(req,res){
-    res.sendFile(path.join(__dirname,"./cilent/build/index.html"));
+    res.sendFile(path.join(__dirname,"./client/build/index.html"));
 });
 
 
